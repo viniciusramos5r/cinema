@@ -51,8 +51,10 @@ function atualizarResumo() {
     Object.values(assentosSelecionados).forEach(tipo => {          //pega o valor de assentosSelecionados//
         tipo === "inteira" ? inteira++ : meia++;           //se o tipo = inteira soma 1 ainteira // //se n // //soma a meia//
     });
-
 // -- mostradouro -- //
+// -- somente nome filme --//
+
+    document.getElementById("nomeFilme").textContent = filme;
     document.getElementById("qtdInteira").textContent = inteira;       //quantas inteiras
     document.getElementById("qtdMeia").textContent = meia;             //quantas meias
     const subI = inteira * precoInteira;                               //quantas vzs o valor
@@ -83,3 +85,4 @@ if (!filme || !horario) {
     alert("Sessão não selecionada!");
     window.location.href = "pagina_login.html";
 }*/
+
