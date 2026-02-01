@@ -29,6 +29,7 @@
 /* Logo */
 .logo{
     color: rgb(218, 181, 112);
+    cursor: pointer;
 }
 .logo span {
     color:rgb(218, 181, 112);

@@ -36,6 +36,11 @@
     );
     box-shadow: 0 10px 25px rgba(0,0,0,0.35);
 }
+.card:hover{
+    box-shadow: 
+        0 4px 12px rgba(39, 36, 227, 0.767),
+        0 8px 25px rgba(23, 37, 134, 0.382);
+}
 
 .card img {
     width: 100%;

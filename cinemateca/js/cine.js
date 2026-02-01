@@ -64,6 +64,11 @@ function atualizarResumo() {
 
 //-- compra --//
 function comprar() {
+    const usuario = sessionStorage.getItem("logado");
+    if (!usuario) {
+        alert("Faça login para concluir a compra");
+        return;
+    }
     const novosOcupados = Object.keys(assentosSelecionados).map(Number);      // pega o numero dos assentos e transforma em de verdade // 
     assentosOcupados = assentosOcupados.concat(novosOcupados);                //junta os q ja estao ocupados //
 

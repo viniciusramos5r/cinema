@@ -7,11 +7,23 @@
 <style>
 </style>
 <link rel="stylesheet" href="css/cine.css" type="text/css">
-<!--<link rel="stylesheet" href="css/header.css" type="text/css">-->
+<link rel="stylesheet" href="css/header.css" type="text/css">
 
 </head>
 
 <body>
+
+<header class="header">
+    <div class="header-container">
+        <!-- // Logo // -->
+        <div  onclick="window.location.href='filmes.html'"class="logo">OL<br><span>Filmes</span></div>
+        <!-- // Btns // -->
+        <div class="header-actions">
+            <button id="logar" onclick="logar()">Login</button>
+            <button id="sair" onclick="sair()">Sair</button>
+        </div>
+    </div>
+</header>
 
 <h2>Seleção de Assentos</h2>
 <div class="layout">
@@ -28,11 +40,12 @@
                 Meia Entrada
             </label>
         </div>
+        <div class="linha"></div>
         <!-- legenda -->
         <div style="text-align: center;" class="legenda box">
-            <span style="color: #bdaaaa;"><div style="width: 20px;height: 20px; background: #bdaaaa;float: left;"></div>Disponível</span>
-            <span style="color: #38bb3d;"><div style="width: 20px;height: 20px; background: #38bb3d;float: left;"></div>Selecionado</span>
-            <span style="color: #c22e1a;"><div style="width: 20px;height: 20px; background: #c22e1a;float: left;"></div>Ocupado</span>   <!--(float) do ladinho da palv-->
+            <span style="color: #6955dc;"><div style=" border-radius: 4px;border: #3f5ee7 2px solid;width: 20px;height: 20px; background: #f8f5f5;float: left;"></div>Disponível</span>
+            <span style="color: #38bb3d;"><div style="border-radius: 4px;border: #3f5ee7 2px solid;width: 20px;height: 20px; background: #38bb3d;float: left;"></div>Selecionado</span>
+            <span style="color: #c22e1a;"><div style="border-radius: 4px;border: #3f5ee7 2px solid;width: 20px;height: 20px; background: #c22e1a;float: left;"></div>Ocupado</span>   <!--(float) do ladinho da palv-->
         </div>
         <!-- sala -->
         <div class="sala" id="sala"></div>                     <!--cria no jv-->
@@ -56,6 +69,26 @@
 </div>
 <!-- // script //-->
     <script src="js/cine.js"></script>
+    <script>
+// /// texte btn login /// //
+  function atualizarBotoes() {
+    const logado = sessionStorage.getItem("logado") === "true";
+// -- subistituir btn -- //
+    document.getElementById("logar").style.display = logado ? "none" : "inline-block";
+    document.getElementById("sair").style.display  = logado ? "inline-block" : "none";
+}
+// -- botao login -- //
+function logar() {
+    window.location.href = "pagina_login.html";
+}
+// -- botao sair -- //
+function sair() {
+    sessionStorage.removeItem("logado");
+    atualizarBotoes();
+}
+// verifica no inicio //
+atualizarBotoes();
+    </script>
     
 </body>
 </html>

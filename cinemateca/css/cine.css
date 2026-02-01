@@ -62,12 +62,18 @@ h2 {
 .assento {
     width: 40px;
     height: 40px;
-    background: #bdaaaa;
+    background: #fbf4f4;
     cursor: pointer;
     text-align: center;
     line-height: 40px;
     font-size: 12px;
-    border-radius: 4px;
+    border-radius: 4px;border: #3f5ee7 2px solid;
+}
+.assento:hover{
+    
+    box-shadow: 
+        0 4px 12px rgba(39, 36, 227, 0.767),
+        0 8px 25px rgba(23, 37, 134, 0.382);
 }
 
 .assento.selecionado {
@@ -87,11 +93,17 @@ h2 {
         0 8px 25px rgba(21, 107, 14, 0.25);
 }
 
-/* Legenda */
+/* box*/
+.box{
+    text-align: center;
+}
+
+/* legenda */
 .legenda span {
     display: inline-block;
     margin-right: 15px;
 }
+
 
 /* btns */
 .btn_comprar {
@@ -119,5 +131,7 @@ h2 {
     margin: 20px 0;
     border-radius: 4px;
 }
+
+
 
 
