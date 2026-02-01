@@ -1,0 +1,122 @@
+
+
+.grid-filmes {
+    display: grid;
+    grid-template-columns: repeat(4, 230px);
+    gap: 30px;
+    justify-content: center;
+    color: wheat;
+}
+
+@media (max-width: 900px) {
+    .grid-filmes {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+@media (max-width: 500px) {
+    .grid-filmes {
+        grid-template-columns: 1fr;
+    }
+}
+.card {
+    
+    border-radius: 6px;
+    padding: 10px;
+    box-shadow: 0 0 6px rgba(207, 30, 30, 0.8);
+
+    width: 230px;       
+    min-height: 420px;     
+    display: flex;
+    flex-direction: column;
+
+    background: linear-gradient(
+        135deg,
+        #220606 0%,  
+        #a6241b 100%  
+    );
+    box-shadow: 0 10px 25px rgba(0,0,0,0.35);
+}
+.card:hover{
+    box-shadow: 
+        0 4px 12px rgba(39, 36, 227, 0.767),
+        0 8px 25px rgba(23, 37, 134, 0.382);
+}
+
+.card img {
+    width: 100%;
+    height: 300px;      /* fixa da capa */
+    object-fit: cover;
+    border-radius: 4px;
+}
+
+.img-box {
+    position: relative;
+    cursor: pointer;
+}
+
+.img-box img {
+    width: 100%;
+    aspect-ratio: 2 / 3;   /* proporção da capa */
+    object-fit: cover;
+    display: block;
+}
+
+/* seta */
+.overlay {
+    position: absolute;
+    inset: 0;
+    background: rgba(255,255,255,0.75);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    opacity: 0;
+    transition: 0.3s;
+}
+
+.seta {
+    width: 50px;
+    height: 50px;
+    background: #000;
+    color: #fff;
+    border-radius: 50%;
+    font-size: 26px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.img-box:hover .overlay {
+    opacity: 1;
+}
+
+/* btn das horas */
+.sessoes button {
+    background: linear-gradient(135deg, #14b091, #16a085);
+    color: #fff;
+    border: none;
+    border-radius: 6px;
+    padding: 7px 12px;
+    font-size: 14px;
+    font-weight: 600;
+    cursor: pointer;
+    margin: 6px 6px 0 0;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.25);
+    transition: 
+        transform 0.15s ease,
+        box-shadow 0.15s ease,
+        background 0.2s ease;
+}
+
+.sessoes button:hover {
+    background: linear-gradient(135deg, #20e3b2, #18c29c);
+    transform: translateY(-2px);
+    box-shadow: 0 6px 14px rgba(0,0,0,0.35);
+}
+
+.sessoes button:active {
+    transform: scale(0.96);
+}
+
+
+
+
