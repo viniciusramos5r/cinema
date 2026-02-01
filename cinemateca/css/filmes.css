@@ -1,5 +1,10 @@
-
-
+@media (max-width: 600px) {
+.box-filmes{
+    justify-content: center;
+    align-items: center;
+    display: flex;
+}
+}
 .grid-filmes {
     display: grid;
     grid-template-columns: repeat(4, 230px);
@@ -23,12 +28,10 @@
     border-radius: 6px;
     padding: 10px;
     box-shadow: 0 0 6px rgba(207, 30, 30, 0.8);
-
     width: 230px;       
     min-height: 420px;     
     display: flex;
     flex-direction: column;
-
     background: linear-gradient(
         135deg,
         #220606 0%,  

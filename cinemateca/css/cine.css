@@ -27,6 +27,12 @@ h2 {
 }
 
 /* colunas */
+@media (max-width: 768px) {
+.campo_esquerda,
+.campo_direita {
+    width: 100%;
+}
+}
 .campo_esquerda,
 .campo_direita {
     background: rgba(255,255,255,0.95);
