@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+<meta charset="UTF-8">
+<title>Seleção de Assentos</title>
+
+<style>
+</style>
+<link rel="stylesheet" href="css/cine.css" type="text/css">
+<!--<link rel="stylesheet" href="css/header.css" type="text/css">-->
+
+</head>
+
+<body>
+
+<h2>Seleção de Assentos</h2>
+<div class="layout">
+    <div class="campo_esquerda">
+        <div class="box">
+            <!-- Tipo de ingresso -->
+            <strong>Tipo de ingresso:</strong><br>
+            <label>
+                <input type="radio" name="tipo" value="inteira" checked>           <!-- radio pr permitir somente 1 e garante q tenha selecionado-->   <!--(checkd) define como padaro-->
+                Inteira
+            </label>
+            <label>
+                <input type="radio" name="tipo" value="meia">
+                Meia Entrada
+            </label>
+        </div>
+        <!-- legenda -->
+        <div style="text-align: center;" class="legenda box">
+            <span style="color: #bdaaaa;"><div style="width: 20px;height: 20px; background: #bdaaaa;float: left;"></div>Disponível</span>
+            <span style="color: #38bb3d;"><div style="width: 20px;height: 20px; background: #38bb3d;float: left;"></div>Selecionado</span>
+            <span style="color: #c22e1a;"><div style="width: 20px;height: 20px; background: #c22e1a;float: left;"></div>Ocupado</span>   <!--(float) do ladinho da palv-->
+        </div>
+        <!-- sala -->
+        <div class="sala" id="sala"></div>                     <!--cria no jv-->
+    </div>
+    <!-- mostrar oq foi escolhido -->
+    <div class="campo_direita">
+        <div class="box">
+            <h3 style="text-align: center;">Mostradouro</h3>
+            <div class="linha"></div>
+            <p>Inteiras: <span id="qtdInteira">0</span></p>
+            <p>Meias: <span id="qtdMeia">0</span></p>
+            <p>Subtotal Inteira: R$ <span id="subInteira">0.00</span></p>
+            <p>Subtotal Meia: R$ <span id="subMeia">0.00</span></p>
+            <div class="linha"></div>
+            <strong>Total: R$ <span id="total">0.00</span></strong>
+        </div>
+        <!-- botao -->
+         
+       <button class="btn_comprar" onclick="comprar()">Comprar</button>
+    </div>
+</div>
+<!-- // script //-->
+    <script src="js/cine.js"></script>
+    
+</body>
+</html>
