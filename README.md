@@ -1,3 +1,5 @@
+# link do git
+- https://github.com/viniciusramos5r/cinema.git
 # cinema
 simulador de compra de ingresso para cinema 
 
